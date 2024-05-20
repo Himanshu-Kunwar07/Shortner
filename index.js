@@ -9,7 +9,7 @@ const { connectToMongoDB } = require("./connect");
 const app = express();
 const PORT = process.env.PORT || 8001;
 
-//connection
+//connection 
 connectToMongoDB(process.env.MONGO_URL)
   .then(() => console.log("mongodb connected"))
   .catch((err) => console.log(`${err} Occured`));
